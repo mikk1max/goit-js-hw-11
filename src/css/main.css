@@ -1,0 +1,60 @@
+:root {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#search {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  min-width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  background: #fff;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #808080;
+
+  outline: none;
+}
+
+#search:hover {
+  border: 1px solid #000;
+}
+
+#search:focus {
+  border: 1px solid #4e75ff;
+}
+
+#searchBtn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 91px;
+  height: 40px;
+  background: #4e75ff;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+#searchBtn:hover {
+  background: #6c8cff;
+}
