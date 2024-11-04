@@ -16,8 +16,8 @@ jobs:
           npm install
 
       - name: Build project 🔧
-        env: 
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        env:
+          VITE_PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: |
           npm run build
 

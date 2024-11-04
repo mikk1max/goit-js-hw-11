@@ -1,4 +1,4 @@
-const apiKey = import.meta.env.PIXABAY_API_KEY;
+const apiKey = import.meta.env.VITE_PIXABAY_API_KEY;
 
 const options = new URLSearchParams({
   key: `${apiKey}`,
