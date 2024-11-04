@@ -53,7 +53,7 @@ form.addEventListener('submit', e => {
       .catch(error => {
         console.log(error);
       });
-  }, 3000);
+  }, 2000);
 
   photos.on('show.simplelightbox', () => {
     console.log('SimpleLightbox opened');
