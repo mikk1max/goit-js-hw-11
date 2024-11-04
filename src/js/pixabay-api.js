@@ -1,7 +1,7 @@
 const apiKey = import.meta.env.PIXABAY_API_KEY;
 
 const options = new URLSearchParams({
-  key: '46868133-33c4a6dc591014855bc3379a8',
+  key: `${apiKey}`,
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
