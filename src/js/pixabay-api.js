@@ -1,19 +1,20 @@
-const apiKey = import.meta.env.VITE_PIXABAY_API_KEY;
+import axios from 'axios';
 
-const options = new URLSearchParams({
-  key: `${apiKey}`,
-  image_type: 'photo',
-  orientation: 'horizontal',
-  safesearch: true,
-});
+const BASE_URL = 'https://pixabay.com/api/';
+const API_KEY = import.meta.env.VITE_PIXABAY_API_KEY;
 
-function fetchUsers(q) {
-  return fetch(`https://pixabay.com/api/?q=${q}&${options}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  });
+function getImagesByQuery(query) {
+  return axios
+    .get(BASE_URL, {
+      params: {
+        key: API_KEY,
+        q: query,
+        image_type: 'photo',
+        orientation: 'horizontal',
+        safesearch: true,
+      },
+    })
+    .then(response => response.data);
 }
 
-export default fetchUsers;
+export { getImagesByQuery };
